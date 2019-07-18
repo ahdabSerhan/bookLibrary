@@ -9,7 +9,8 @@ const app=express();
 //allow- cross-origin requests
 app.use(cors());
 //connect to mongoDb Daatabase userName : Ahdab Password: blackeyes
-mongoose.connect('mongodb+srv://Ahdab:blackeyes@gql-ninja-5zh9v.mongodb.net/test?retryWrites=true&w=majority');
+//mongodb+srv://Ahdab:<password>@cluster0-axfni.mongodb.net/test?retryWrites=true&w=majority
+mongoose.connect('mongodb+srv://Ahdab:blackeyes@cluster0-axfni.mongodb.net/posts?retryWrites=true&w=majority');
 mongoose.connection.once('open',()=>{
   console.log("connected to DB");
 })
